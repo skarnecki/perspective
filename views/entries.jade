@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{user} - Perspective
+  ul
+    each val in entries.length ? entries : ['User has no perspective']
+      li
+        p
+          a(href=val.url) #{val.title}
+          | Time spent #{val.time/60} min
+
+
+
