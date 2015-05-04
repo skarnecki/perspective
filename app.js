@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var entries = require('./routes/entries');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
-var connectionString = process.env.MONGODB_URL || 'mongodb://localhost/perspective';
+var connectionString = process.env.MONGOLAB_URI || 'mongodb://localhost/perspective';
 
 mongoose.connect(connectionString, function(err) {
   if(err) {
